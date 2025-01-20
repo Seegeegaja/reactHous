@@ -1,3 +1,17 @@
+.menu{
+  padding: 15px;
+  background-color: darkslateblue;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  
+}
 .manu-list{
   margin-top: 20px;
   margin-left: auto;
