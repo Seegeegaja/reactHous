@@ -1,0 +1,44 @@
+.manu-list{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000080;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.manu-list span{
+  padding: 0 15px;
+}
+.product-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000080;
+  font-size: 20px;
+}
+.product-list h4{
+  margin-left: 80px;
+  text-align: center;
+  margin-top: 40px;
+
+}
+.product-list p{
+  margin-top: 0px;
+}
+.product-list span{
+  font-size: 10px;
+}
+.modal{
+  text-align: center;
+  background-color: #eee;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
