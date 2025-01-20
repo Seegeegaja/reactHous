@@ -1,8 +1,14 @@
+import React from "react"
+
 function Modal(props){
+  let d = props.data;
+  let c = props.index
+
   return(
     <div className="modal">
-      <h4>{props.content}</h4>
-      <p>{props.price}만원</p>
+      <img src={d[c].image}></img>
+      <h4>{d[c].content}</h4>
+      <p>{d[c].price}</p>
     </div>
   );
 }

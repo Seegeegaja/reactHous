@@ -2,20 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import Modal from "./Modal";
+import Data from "./component/data";
 
 function App() {
+  const [data, setData] = useState(Data);
   let [menu, setMenu] = useState(["Home", "Shop", "About"]);
-  let [price, setPrice] = useState([50, 55, 70]);
-  let [products, setProducts] = useState([
-    "역삼동 원룸",
-    "천호동 원룸",
-    "마포구 원룸",
-  ]);
-  let [content, setContent] = useState([
-    "침실만 따로 있는 공용 셰어하우스입니다. 최대 2인 가능",
-    "2층 원룸입니다. 비올 때 물 가씀 들어오는거 빼면 좋아요",
-    "살기 좋아요. 주변에 편의점 10개 넘어요",
-  ]);
   let [count, setCount] = useState([0, 0, 0]);
   let [showmodal, setShowModal] = useState(false);
   let [index, setIndex] = useState([0, 1, 2]);
@@ -34,7 +25,7 @@ function App() {
             return <a href="#">{x}</a>;
           })}
         </div>
-        {products.map(function (x, y) {
+        {data.map(function (x, y) {
           return (
             <div>
               <div className="product-list">
@@ -50,7 +41,8 @@ function App() {
                     }
                   }}
                 >
-                  {products[y]}
+                  <img src={data[y].image}></img><br/>
+                  {data[y].title}
                 </h4>
                 <span
                   onClick={() => {
@@ -61,14 +53,16 @@ function App() {
                 </span>
               </div>
               <div className="product-list">
-                <p>{price[y]}만원</p>
+                <p>{data[y].price}만원</p>
               </div>
             </div>
           );
         })}
       </div>
-      {showmodal == true ? (
-        <Modal content={content[index]} price={price[index]} />
+      {showmodal == true ? 
+          (<Modal  data={data} index={index} />
+        
+      
       ) : null}
     </div>
   );
