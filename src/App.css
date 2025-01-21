@@ -1,3 +1,7 @@
+.App {
+  text-align: center;
+}
+
 .menu{
   padding: 15px;
   background-color: darkslateblue;
@@ -12,23 +16,30 @@
   padding: 10px;
   
 }
-.manu-list{
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000080;
+.showMo{
+  position: fixed;
+  background-color: blueviolet;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
   color: white;
-  font-size: 20px;
-  font-weight: 500;
+
 }
-.manu-list span{
-  padding: 0 15px;
+.modal-bl{
+  width: 100%;
+  height: 250px;
+  background: rgba(0,0,0,5);
+  position: fixed;
+  padding: 20px;
 }
+.modal{
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
 .product-list{
   display: flex;
   align-items: center;

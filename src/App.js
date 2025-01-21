@@ -25,9 +25,19 @@ function App() {
             return <a href="#">{x}</a>;
           })}
         </div>
+        <div  className="showMo">
+          처음처럼 가격👆👇 상품명👆👇
+        </div>
+        <div>
+          {showmodal == true ? 
+          <Modal data={data} 
+          index={index} 
+          setShowModal={setShowModal}
+          showmodal={showmodal}/> : null}
+        </div>
         {data.map(function (x, y) {
           return (
-            <div>
+            <div key={x.id}>
               <div className="product-list">
                 <h4
                   onClick={() => {
@@ -41,7 +51,8 @@ function App() {
                     }
                   }}
                 >
-                  <img src={data[y].image}></img><br/>
+                  <img src={data[y].image}></img>
+                  <br />
                   {data[y].title}
                 </h4>
                 <span
@@ -59,11 +70,6 @@ function App() {
           );
         })}
       </div>
-      {showmodal == true ? 
-          (<Modal  data={data} index={index} />
-        
-      
-      ) : null}
     </div>
   );
 }
